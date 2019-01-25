@@ -20,13 +20,56 @@ const floopy = <div>
     </a>
 </div>;
 
+const gooby = "Jeff"
 
-
-function Mine(props) {
-    return <h1>hello {props.name}</h1>;
+class Mine extends Component {
+    render() {
+        return <h1>hello {this.props.name}</h1>;
+    }
 }
 
-const element = <div><Mine name="jeff" />{floopy}</div>;
+class Clock extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {date: new Date(), gooby: "asdf"};
+    }
+
+    componentDidMount() {
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        );
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+
+
+    tick() {
+        this.setState({
+            date: new Date(),
+            gooby: gooby
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>Hello, {this.state.gooby}</h1>
+                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+            </div>
+        )
+    }
+}
+
+
+const element = <div>
+    <Mine name="jeff" />
+    {floopy}
+    <Mine name="yourNameHere" />
+    <Clock/>
+</div>;
 
 class App extends Component {
   render() {
