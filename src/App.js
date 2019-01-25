@@ -20,7 +20,7 @@ const floopy = <div>
     </a>
 </div>;
 
-const gooby = "Jeff"
+const gooby = "Jeff";
 
 class Mine extends Component {
     render() {
@@ -68,7 +68,7 @@ const element = <div>
     <Mine name="jeff" />
     {floopy}
     <Mine name="yourNameHere" />
-    <Clock/>
+    <Clock />
 </div>;
 
 class App extends Component {
