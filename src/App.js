@@ -48,7 +48,7 @@ class StarWarsApi extends Component {
             });
             return (
                 <div>
-                    <h1>Using the SWAPI to Star Wars People</h1>
+                    <h1>Using the SWAPI to get Star Wars People</h1>
                     <ul>
                         {listItems}
                     </ul>
