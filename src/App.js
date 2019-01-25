@@ -38,8 +38,8 @@ class StarWarsApi extends Component {
                 return (
                     <li key={item.name}>
                         Name: {item.name}<br />
-                        Height: {item.mass}<br />
-                        Mass: {item.mass}<br />
+                        Height: {item.height}cm<br />
+                        Mass: {item.mass}kg<br />
                         Hair Color: {item.hair_color}<br />
                         Eye Color: {item.eye_color}<br />
                         <br />
