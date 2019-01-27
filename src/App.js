@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Clock from './clock.js';
 import './App.css';
 
 class StarWarsApi extends Component {
@@ -58,7 +59,7 @@ class StarWarsApi extends Component {
     }
 }
 
-const element = <StarWarsApi />;
+const element = <div><Clock /><StarWarsApi /></div>;
 
 class App extends Component {
   render() {
